@@ -1,0 +1,25 @@
+{
+  "name": "cbrudesala.github.io",
+  "version": "1.0.0",
+  "description": "cbrudesala site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbrudesala/cbrudesala.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbrudesala/cbrudesala.github.io/issues"
+  },
+  "homepage": "https://github.com/cbrudesala/cbrudesala.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.5.2",
+    "lodash": "^4.17.4"
+  }
+}
