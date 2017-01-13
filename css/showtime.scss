@@ -1,0 +1,18 @@
+---
+# jekyll stuff
+---
+@import "variables";
+@import "typography";
+
+body {
+  width:500px;
+  color: $primary-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer {
+  color: $secondary-color;
+}
