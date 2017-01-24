@@ -3,30 +3,20 @@ layout: page
 title: Contact
 ---
 
-<div class="container page-container ph3 ph4-l animated fadeIn">
-
-  <div id="main" class="container" role="main">
-    <ul class="projects list cf">
-     <li class="project-unit fl w-100 w-50-ns pr1-ns pr2-l pb2 pb3-l">
-        <a href="/projects/clotilde.html" class="db absolute--fill" title="Clotilde" itemprop="url">
-          <img src="/assets/imgs/projects/clotilde/clotilde_thumb.jpg" alt="Clotilde">
-          <figcaption>
-            Clotilde Barcelona
-            <span>Branding tienda de ropa</span>
+<ul class="list cf pa0">
+  {% for project in site.projects %}
+    <li class="border-box fl w-100 w-50-ns {% cycle 'pr1-ns pr2-l', 'pl1-ns pl2-l' %} pb2 pb3-l">
+      <a href="{{project.url}}" class="db absolute--fill">
+        <figure class="ma0 hide-child relative">
+          <img class="" src="/assets/imgs/projects/{{project.name}}/{{project.name}}_thumb.jpg" alt="Clotilde">
+          <figcaption class="child absolute top-0 bg-white-rgba w-100 h-100">
+            <div class="pl4 pt2">
+              <h3 class="dark-gray f3 fw1 mb1">{{ project.title }}</h3>
+              <span class="mid-gray f6">{{ project.subtitle }}</span>
+            </div>
           </figcaption>
-        </a>
-      </li>
-      <li class="project-unit fl w-100 w-50-ns pl1-ns pl2-l pb2 pb3-l">
-        <a href="/projects/app.html" class="db absolute--fill" title="App" itemprop="url">
-          <img src="/assets/imgs/projects/app/app_thumb.jpg" alt="App">
-          <figcaption>
-            App
-            <span>App inventada con jordi9</span>
-          </figcaption>
-        </a>
-      </li>
-
-    </ul>
-  </div>
-
-</div>
+        </figure>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
