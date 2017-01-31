@@ -3,6 +3,7 @@
 ---
 @import "variables";
 @import "typography";
+@import "timeline";
 
 html{
 
@@ -29,4 +30,11 @@ a {
 
 .bg-white-rgba{
   background-color: rgba(255,255,255,0.7)
+}
+
+p{
+  color: #555;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: .5rem;
 }
