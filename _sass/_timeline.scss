@@ -1,8 +1,7 @@
 @import "bourbon/bourbon";
+@import "carousel";
 
 // variables - colors
-
-
 
 $link: #acb7c0; // anchor tags
 $background: #e9f0f5; // body background color
@@ -12,23 +11,6 @@ $color-2: #c03b44; // red
 $color-3: #ffffff; // white
 $color-4: #75ce66; // green
 $color-5: #f0ca45; // yellow
-
-// variables - fonts
-
-$primary-font: 'Droid Serif', serif;
-$secondary-font: 'Open Sans', sans-serif;
-
-// mixins - rem fallback - credits: http://zerosixthree.se/
-
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
-}
-
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
 
 // mixins - border radius
 
@@ -72,11 +54,6 @@ html * {
 }
 
 body {
-	font: {
-		size: 100%;
-		family: $primary-font;
-	}
-
 
 	background-color: $background;
 }
@@ -84,7 +61,6 @@ body {
 a {
 	color: $link;
 	text-decoration: none;
-	font-family: $secondary-font;
 }
 
 img {
@@ -92,7 +68,6 @@ img {
 }
 
 h1, h2 {
-	font-family: $secondary-font;
 	font-weight: bold;
 }
 
@@ -125,27 +100,25 @@ Main components
 #cd-timeline {
 	position: relative;
 	padding: 2em 0;
-	margin: {
-		top: 2em;
-		bottom: 2em;
-	}
+  padding-top: 0;
+
 
 	&::before {
 		/* this is the vertical line */
 		content: '';
 		position: absolute;
-		top: 0;
 		left: 18px;
 		height: 100%;
 		width: 4px;
 		background: darken($background, 5%);
 	}
 
+  margin: {
+    top: 3em;
+    bottom: 2em;
+  }
+
 	@include MQ(L) {
-		margin: {
-			top: 3em;
-			bottom: 3em;
-		}
 
 		&::before {
 			left: 50%;
@@ -258,39 +231,8 @@ Main components
 	box-shadow: 0 3px 0 darken($background, 5%);
 	@include clearfix;
 
-	h2 {
-		color: $color-1;
-	}
-
-	p, .cd-read-more, .cd-date {
-		@include font-size(13px);
-	}
-
-	.cd-read-more, .cd-date {
-		display: inline-block;
-	}
-
 	p {
 		margin: 1em 0;
-		line-height: 1.6;
-	}
-
-	.cd-read-more {
-		float: right;
-		padding: .8em 1em;
-		background: $link;
-		color: $color-3;
-		@include border-radius;
-
-		.no-touch &:hover {
-			background-color: lighten($link, 5%);
-		}
-	}
-
-	.cd-date {
-		float: left;
-		padding: .8em 0;
-		opacity: .7;
 	}
 
 	&::before {
@@ -302,20 +244,6 @@ Main components
 		width: 0;
 		border: 7px solid transparent;
 		border-right: 7px solid $color-3;
-	}
-
-	@include MQ(M) {
-		h2 {
-			@include font-size(20px);
-		}
-
-		p {
-			@include font-size(16px);
-		}
-
-		.cd-read-more, .cd-date {
-			@include font-size(14px);
-		}
 	}
 
 	@include MQ(L) {
@@ -330,18 +258,6 @@ Main components
 			border-left-color: $color-3;
 		}
 
-		.cd-read-more {
-			float: left;
-		}
-
-		.cd-date {
-			position: absolute;
-			width: 100%;
-			left: 122%;
-			top: 6px;
-			@include font-size(16px);
-		}
-
 		.cd-timeline-block:nth-child(even) & {
 			float: right;
 
@@ -353,15 +269,6 @@ Main components
 				border-right-color: $color-3;
 			}
 
-			.cd-read-more {
-				float: right;
-			}
-
-			.cd-date {
-				left: auto;
-				right: 122%;
-				text-align: right;
-			}
 		}
 
 		.cssanimations &.is-hidden {
