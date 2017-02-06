@@ -12,8 +12,9 @@ $background: #e9f0f5; // body background color
 $color-1: #303e49; // blue dark
 $color-2: #c03b44; // red
 $color-3: #ffffff; // white
-$color-4: #75ce66; // green
-$color-5: #f0ca45; // yellow
+$color-4: #9ebace; // blue-gray
+$color-5: #d7e4ed; // light gray
+
 
 // mixins - border radius
 
@@ -110,7 +111,8 @@ Main components
 		/* this is the vertical line */
 		content: '';
 		position: absolute;
-		left: 18px;
+		left: 13px;
+    top: 15px;
 		height: 100%;
 		width: 4px;
 		background: darken($background, 5%);
@@ -125,6 +127,7 @@ Main components
 
 		&::before {
 			left: 50%;
+      top: 15px;
 			margin-left: -2px;
 		}
 	}
@@ -144,7 +147,7 @@ Main components
 	}
 
 	@include MQ(L) {
-		margin: 4em 0;
+		margin: -4em 0;
 
 		&:first-child {
 			margin-top: 0;
@@ -158,12 +161,11 @@ Main components
 
 .cd-timeline-img {
 	position: absolute;
-	top: 0;
+	top: 15px;
 	left: 0;
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	border-radius: 50%;
-	box-shadow: 0 0 0 4px $color-3, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
 
 	img {
 		display: block;
@@ -176,23 +178,17 @@ Main components
 		margin-top: -12px;
 	}
 
-	&.cd-picture {
-		background: $color-4;
+	&.cd-picture, &.cd-movie, &.cd-location {
+    background: $color-4;
+    border: 4px solid $color-5;
 	}
 
-	&.cd-movie {
-		background: $color-2;
-	}
-
-	&.cd-location {
-		background: $color-5;
-	}
 
 	@include MQ(L) {
-		width: 60px;
-		height: 60px;
+		width: 30px;
+		height: 30px;
 		left: 50%;
-		margin-left: -30px;
+		margin-left: -15px;
 
 		/* Force Hardware Acceleration in WebKit */
 		-webkit-transform: translateZ(0);
