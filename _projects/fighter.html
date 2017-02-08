@@ -9,6 +9,7 @@ description: >
     After that, I wanted to share all the lessons learned with the rest of the company and improve my coding skills.
     So, what a better way to do it than making a little game.
 extra_css: timeline
+full_width: true
 ---
 
 {% include timeline.html %}
@@ -19,9 +20,7 @@ extra_css: timeline
   So, what a better way to do it than making a little game.
 </p>
 
-
 {% include slider.html %}
-
 
 <p class="mid-gray f4 lh-copy w-70 mb4">
   This is the story about how I started creating and coding small little creatives.
@@ -30,10 +29,11 @@ extra_css: timeline
 <img class="w-100 z-max" src="/assets/imgs/projects/fighter/fighter_05.jpg" style="vertical-align: middle;">
 
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="/assets/js/util.js"> </script>
 <script src="/assets/js/carousel.js"> </script>
 <script type="text/javascript">
-  $('.carousel').carousel()
+  $('.carousel').carousel({
+    interval: false
+  })
 </script>

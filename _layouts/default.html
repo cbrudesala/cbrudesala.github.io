@@ -5,18 +5,19 @@
 
   <body>
 
-    <div  class="page-size center ph3 ph4-l">
+    <div class="ph3 ph4-l">
 
-      {% include header.html %}
+      <div class="center page-size">
+        {% include header.html %}
+      </div>
 
-      <main>
-
+      <main {% if page.full_width %}{% else %}class="center page-size" {% endif %}>
         {{ content }}
-
       </main>
 
-      {% include footer.html %}
-
+      <div class="center page-size">
+        {% include footer.html %}
+      </div>
     </div>
 
   </body>

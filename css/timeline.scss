@@ -24,9 +24,9 @@ $color-5: #d7e4ed; // light gray
 
 // layout - breakpoints
 
-$S:     320px;
-$M:     768px;
-$L:     1170px;
+$S:     30em;
+$M:     30em;
+$L:     60em;
 
 // layout - media queries
 
@@ -35,7 +35,7 @@ $L:     1170px;
    @media only screen and (min-width: $S) { @content; }
   }
   @else if $canvas == M {
-   @media only screen and (min-width: $M) { @content; }
+   @media only screen and (min-width: $M) and (max-width: $L) { @content; }
   }
   @else if $canvas == L {
    @media only screen and (min-width: $L) { @content; }
@@ -78,8 +78,6 @@ Modules - reusable parts of our design
 
 .cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
 	width: 90%;
-	max-width: $L; // breakpoints inside partials > _layout.scss
-	margin: 0 auto;
 
 	&::after { /* clearfix */
 		content: '';
@@ -98,14 +96,14 @@ Main components
   background-color: $background;
 
   margin: {
-    left: -2.5rem;
-    right: -2.5rem;
+    left: -1rem;
+    right: -1rem;
   }
 
   @include MQ(L) {
     margin: {
-      left: -6rem;
-      right: -6rem;
+      left: -2rem;
+      right: -2rem;
     }
   }
 }
