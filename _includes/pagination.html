@@ -42,14 +42,15 @@
 {% endif %}
 
 <div id="post-nav">
-    <div >
+    <div class="pagination pv5 cf">
         {% if prevPost.url %}
-        <a class="mid-gray prev fl f4" href="{{prevPost.url}}">
-            <span>&lt; {{prevPost.title}}</span>
+        <a class="mid-gray prev fl f4 v-mid" href="{{prevPost.url}}">
+            <span>Previous project</span>
+            <span class="silver-gray">&lt; {{prevPost.title}}</span>
         </a>
         {% endif %}
         {% if nextPost.url %}
-        <a class="mid-gray next fr f4" href="{{nextPost.url}}">
+        <a class="mid-gray next fr f4 v-mid" href="{{nextPost.url}}">
             <span>{{nextPost.title}} &gt;</span>
         </a>
         {% endif %}
