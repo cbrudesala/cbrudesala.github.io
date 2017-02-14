@@ -9,6 +9,8 @@ layout: default
   </div>
 </div>
 
-{{ content }}
+<div {% if page.full_width %}{% else %}class="center page-size" {% endif %}>
+  {{ content }}
+</div>
 
 {%include pagination.html %}

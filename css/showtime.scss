@@ -5,10 +5,6 @@
 @import "typography";
 //@import "timeline";
 
-html{
-
-}
-
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 200;
@@ -41,4 +37,20 @@ p{
 
 .verde-ceci{
   background-color: #006C70;
+}
+
+.mh--1 {
+  margin: {
+    left: -1rem;
+    right: -1rem;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .mh--1-l {
+    margin: {
+      left: -2rem;
+      right: -2rem;
+    }
+  }
 }

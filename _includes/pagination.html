@@ -41,21 +41,17 @@
   {% endfor %}
 {% endif %}
 
-<div id="post-nav">
-  <!-- <div class="cf">
-    <hr class="bb bt-0 br-0 bl-0 bw1 b--mid-gray mb3 w3 fl">
-  </div> -->
-
-    <div class="light-gray pv2 cf bg-dark-gray">
-        {% if prevPost.url %}
-        <a class="mid-gray prev fl f4 v-mid" href="{{prevPost.url}}">
-            <span class="dark-gray db">< {{prevPost.title}}</span>
-        </a>
-        {% endif %}
-        {% if nextPost.url %}
-        <a class="mid-gray next fr f4 v-mid" href="{{nextPost.url}}">
-            <span>{{nextPost.title}} &gt;</span>
-        </a>
-        {% endif %}
-    </div>
+<div class="light-gray pv6 cf bg-near-white mh--1 mh--1-l">
+  {% if prevPost.url %}
+  <a class="mid-gray fl f4 v-mid w-40 pl6 ml6" href="{{prevPost.url}}">
+    <span class="db mb3">&laquo; {{prevPost.title}}</span>
+    <img src="/assets/imgs/projects/{{prevPost.name}}/{{prevPost.name}}_thumb.jpg" alt="{{prevPost.name}}">
+  </a>
+  {% endif %}
+  {% if nextPost.url %}
+  <a class="mid-gray fr tr f4 v-mid w-40 pr6 mr6" href="{{nextPost.url}}">
+      <span class="db mb3">{{nextPost.title}} &raquo;</span>
+      <img src="/assets/imgs/projects/{{nextPost.name}}/{{nextPost.name}}_thumb.jpg" alt="{{prevPost.name}}">
+  </a>
+  {% endif %}
 </div>
