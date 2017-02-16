@@ -43,15 +43,19 @@
 
 <div class="light-gray pv6 cf bg-near-white mh--1 mh--1-l">
   {% if prevPost.url %}
-  <a class="mid-gray fl f4 v-mid w-40 pl6 ml6" href="{{prevPost.url}}">
-    <span class="db mb3">&laquo; {{prevPost.title}}</span>
-    <img src="/assets/imgs/projects/{{prevPost.name}}/{{prevPost.name}}_thumb.jpg" alt="{{prevPost.name}}">
+  <a class="border-box mid-gray fl f4 v-mid w-50 pl4 pl6-l" href="{{prevPost.url}}">
+    <div class="w-70-ns fr pr2 pr3-ns">
+      <span class="db mb3">&laquo; {{prevPost.title}}</span>
+      <img src="/assets/imgs/projects/{{prevPost.name}}/{{prevPost.name}}_thumb.jpg" alt="{{prevPost.name}}">
+    </div>
   </a>
   {% endif %}
   {% if nextPost.url %}
-  <a class="mid-gray fr tr f4 v-mid w-40 pr6 mr6" href="{{nextPost.url}}">
+  <a class="border-box mid-gray fr tr f4 v-mid w-50 pr4 pr6-l" href="{{nextPost.url}}">
+    <div class="w-70-ns fl pl2 pl3-ns">
       <span class="db mb3">{{nextPost.title}} &raquo;</span>
       <img src="/assets/imgs/projects/{{nextPost.name}}/{{nextPost.name}}_thumb.jpg" alt="{{prevPost.name}}">
+    </div>
   </a>
   {% endif %}
 </div>
