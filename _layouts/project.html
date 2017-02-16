@@ -1,16 +1,34 @@
----
-layout: default
----
-<div class="page-size center">
-  <h2 class="mt4 dark-gray fw4">  {{ page.title }}  </h2>
-  <p class="mid-gray f4 lh-copy w-70 mb4"> {{ page.description }} </p>
-  <div class="cf">
-    <hr class="bb bt-0 br-0 bl-0 bw1 b--mid-gray mb6 w3 fl">
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+{% include head.html %}
+
+<body>
+
+  <div class="ph3 ph4-l bg-white relative z-1" style="margin-bottom: 564px;">
+
+    {% include header.html %}
+
+    <main>
+      <div class="bg-white relative z-1 pb5">
+        <div class="container">
+          <h2 class="mt4 dark-gray fw4">  {{ page.title }}  </h2>
+          <p class="mid-gray f4 lh-copy w-70 mb4"> {{ page.description }} </p>
+          <div class="cf">
+            <hr class="bb bt-0 br-0 bl-0 bw1 b--mid-gray mb6 w3 fl">
+          </div>
+        </div>
+
+        <div {% if page.full_width %}{% else %}class="container" {% endif %}>
+          {{ content }}
+        </div>
+      </div>
+    </main>
+
   </div>
-</div>
 
-<div {% if page.full_width %}{% else %}class="center page-size" {% endif %}>
-  {{ content }}
-</div>
+  {%include pagination.html %}
 
-{%include pagination.html %}
+</body>
+
+</html>
