@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="page-size center">
+<div class="container">
   <h2 class="mt4 dark-gray fw4">  {{ page.title }}  </h2>
   <p class="mid-gray f4 lh-copy w-70 mb4"> {{ page.description }} </p>
   <div class="cf">
@@ -9,7 +9,7 @@ layout: default
   </div>
 </div>
 
-<div {% if page.full_width %}{% else %}class="center page-size" {% endif %}>
+<div {% if page.full_width %}{% else %}class="container" {% endif %}>
   {{ content }}
 </div>
 

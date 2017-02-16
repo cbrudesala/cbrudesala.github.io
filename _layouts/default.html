@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
   {% include head.html %}
 
@@ -7,7 +7,7 @@
 
     <div class="ph3 ph4-l">
 
-      <div class="center page-size">
+      <div class="container">
         {% include header.html %}
       </div>
 
@@ -15,7 +15,7 @@
         {{ content }}
       </main>
 
-      <div class="center page-size">
+      <div class="container">
         {% include footer.html %}
       </div>
     </div>
