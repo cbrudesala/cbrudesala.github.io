@@ -5,6 +5,12 @@
 @import "typography";
 //@import "timeline";
 
+.container {
+  margin: 0 auto;
+  max-width: 1312px;
+  background-color: #fff;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 200;
@@ -14,10 +20,6 @@ body {
 
 .serif-pro{
   font-family: 'Source Serif Pro', serif;
-}
-
-.page-size {
-  max-width: 1312px;
 }
 
 a {
@@ -33,10 +35,6 @@ p{
   font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: .5rem;
-}
-
-.verde-ceci{
-  background-color: #006C70;
 }
 
 .mh--1 {
