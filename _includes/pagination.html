@@ -1,4 +1,6 @@
-{% for c in site.projects %}
+{% assign projects = site.projects | sort: 'category' %}
+
+{% for c in projects %}
 {% if c.title == page.title %}
   {% assign thisPost = c %}
   {% if forloop.index == 1 %}
@@ -14,7 +16,7 @@
 {% endif %}
 {% endfor %}
 
-{% for c in site.projects %}
+{% for c in projects %}
   {% if c.title == page.title %}
     {% assign prevflag = 0 %}
   {% endif %}
@@ -25,7 +27,7 @@
 {% endfor %}
 
 {% if nextflag == 1 %}
-  {% for c in site.projects %}
+  {% for c in projects %}
     {% if foundPost == 1 %}
       {% assign getNext = 1 %}
     {% endif %}
@@ -63,5 +65,3 @@
 
   {% include footer.html %}
 </div>
-
-
