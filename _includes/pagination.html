@@ -43,24 +43,32 @@
   {% endfor %}
 {% endif %}
 
+{% if prevPost.url %}
+  {% assign prev = prevPost %}
+{% else %}
+  {% assign prev = projects[-1] %}
+{% endif %}
+{% if nextPost.url %}
+  {% assign next = nextPost %}
+{% else %}
+  {% assign next = projects[0] %}
+{% endif %}
+
 <div class="cf bg-near-white fixed bottom-0 left-0 right-0">
   <div class="light-gray pt6 pb5 container cf">
-    {% if prevPost.url %}
-    <a class="border-box mid-gray fl f4 v-mid w-50 pl4 pl6-l" href="{{prevPost.url}}">
+    <a class="border-box mid-gray fl f4 v-mid w-50 pl4 pl6-l" href="{{prev.url}}">
       <div class="w-70-ns fr pr2 pr3-ns">
-        <span class="db mb3">&laquo; {{prevPost.title}}</span>
-        <img src="/assets/imgs/projects/{{prevPost.name}}/{{prevPost.name}}_thumb.jpg" alt="{{prevPost.name}}">
+        <span class="db mb3">&laquo; {{prev.title}}</span>
+        <img src="/assets/imgs/projects/{{prev.name}}/{{prev.name}}_thumb.jpg" alt="{{prev.name}}">
       </div>
     </a>
-    {% endif %}
-    {% if nextPost.url %}
-    <a class="border-box mid-gray fr tr f4 v-mid w-50 pr4 pr6-l" href="{{nextPost.url}}">
+
+    <a class="border-box mid-gray fr tr f4 v-mid w-50 pr4 pr6-l" href="{{next.url}}">
       <div class="w-70-ns fl pl2 pl3-ns">
-        <span class="db mb3">{{nextPost.title}} &raquo;</span>
-        <img src="/assets/imgs/projects/{{nextPost.name}}/{{nextPost.name}}_thumb.jpg" alt="{{prevPost.name}}">
+        <span class="db mb3">{{next.title}} &raquo;</span>
+        <img src="/assets/imgs/projects/{{next.name}}/{{next.name}}_thumb.jpg" alt="{{prev.name}}">
       </div>
     </a>
-    {% endif %}
   </div>
 
   {% include footer.html %}
