@@ -9,13 +9,13 @@ title: Contact
     <li class="border-box fl w-100 w-50-ns {% cycle 'pr1-ns pr2-l', 'pl1-ns pl2-l' %} pb2 pb3-l">
       <a href="{{project.url}}" class="db absolute--fill">
         <figure class="ma0 hide-child relative">
-          <img src="/assets/imgs/projects/{{project.name}}/{{project.name}}_thumb.jpg" alt="Clotilde">
-          <div class="pl4 pt2 absolute top-0  w-100 h-100">
-            <h3 class="dark-gray f3 fw1 mb1">{{ project.title }}</h3>
-            <span class="mid-gray f6">{{ project.subtitle }}</span>
+          <img src="/assets/imgs/projects/{{project.name}}/{{project.name}}_thumb.jpg" alt="{{project.name}}">
+          <div class="pl4 pt2 absolute bottom-2  w-100">
+            <h3 class="dark-gray f4 fw1 mb1 white">{{ project.title }}</h3>
+            <span class="mid-gray f6 white"><small>{{ project.subtitle }}</small></span>
           </div>
           <figcaption class="child absolute top-0  w-100 h-100">
-            <img src="/assets/imgs/projects/{{project.name}}/{{project.name}}_thumb_2.jpg" alt="Clotilde">
+            <img src="/assets/imgs/projects/{{project.name}}/{{project.name}}_thumb_2.jpg" alt="{{project.name}}">
           </figcaption>
         </figure>
       </a>
