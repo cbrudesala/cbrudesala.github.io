@@ -1,4 +1,4 @@
-{% assign projects = site.projects | sort: 'category' %}
+{% assign projects = site.projects | sort: 'date' %}
 
 {% for c in projects %}
 {% if c.title == page.title %}
@@ -46,26 +46,26 @@
 {% if prevPost.url %}
   {% assign prev = prevPost %}
 {% else %}
-  {% assign prev = projects[-1] %}
+  {% assign prev = projects.last %}
 {% endif %}
 {% if nextPost.url %}
   {% assign next = nextPost %}
 {% else %}
-  {% assign next = projects[0] %}
+  {% assign next = projects.first %}
 {% endif %}
 
 <div class="cf bg-near-white fixed bottom-0 left-0 right-0">
   <div class="light-gray pt6 pb5 container cf">
     <a class="border-box mid-gray fl f4 v-mid w-50 pl4 pl6-l" href="{{prev.url}}">
       <div class="w-70-ns fr pr2 pr3-ns">
-        <span class="db mb3 f5 f4-ns">&laquo; {{prev.title}}</span>
+        <span class="db mb1 mb3-ns f5 f4-ns nowrap">&laquo; Previous project</span>
         <img src="/assets/imgs/projects/{{prev.name}}/{{prev.name}}_thumb_2.jpg" alt="{{prev.name}}">
       </div>
     </a>
 
     <a class="border-box mid-gray fr tr f4 v-mid w-50 pr4 pr6-l" href="{{next.url}}">
       <div class="w-70-ns fl pl2 pl3-ns">
-        <span class="db mb3 f5 f4-ns">{{next.title}} &raquo;</span>
+        <span class="db mb1 mb3-ns f5 f4-ns">Next project &raquo;</span>
         <img src="/assets/imgs/projects/{{next.name}}/{{next.name}}_thumb_2.jpg" alt="{{next.name}}">
       </div>
     </a>

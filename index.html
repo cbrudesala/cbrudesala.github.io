@@ -4,7 +4,7 @@ title: Contact
 ---
 
 <ul class="list cf pa0">
-  {% assign projects = site.projects | sort: 'category' %}
+  {% assign projects = (site.projects | sort: 'date') %}
   {% for project in projects %}
     <li class="border-box fl w-100 w-50-ns {% cycle 'pr1-ns pr2-l', 'pl1-ns pl2-l' %} pb2 pb3-l">
       <a href="{{project.url}}" class="db absolute--fill">
