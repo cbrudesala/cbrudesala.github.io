@@ -134,6 +134,18 @@
     cursor: pointer;
     background-color: rgba($carousel-indicator-active-bg, .5);
 
+
+
+      position: relative;
+      max-width: 8px;
+      width: 8px;
+      height: 8px;
+      margin: 0 3px;
+      cursor: pointer;
+      background-color: rgba(0,0,0,0);
+      border: 1px solid #fff;
+      border-radius: 8px;
+
     // Use pseudo classes to increase the hit area by 10px on top and bottom.
     &::before {
       position: absolute;
