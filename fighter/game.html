@@ -1,0 +1,77 @@
+---
+layout: banner-fighter
+bg: fight
+---
+
+<main>
+
+  <article>
+    <img class="lettering" src="/assets/imgs/projects/fighter/game/banner-lettering-2.png" alt="Logo" />
+  </article>
+
+  <article class="screen">
+    <section class="header" ng-app="fighterApp" ng-controller="GameController as game">
+      <div class="barra-vida"></div>
+      <div class="barra-vidaA"></div>
+      <div class="barra-vidaB"></div>
+      <p class="text-option float-l" ng-bind="game.name"></p>
+      <p class="text-option float-r">Banner Master</p>
+      <p id="countdown" class="countdown">20</p>
+      <p class="round">ROUND <span id="current-level">1</span></p>
+    </section>
+
+    <article class="">
+      <p id="startdown" class="startdown" style="display:none;"></p>
+    </article>
+
+    <ul class="row battle-section">
+      <div class="carousel_nav">
+        <a href="#" class="nav next">Next</a>
+      </div>
+
+      {% for i in(1..10) %}
+        <li class="slide slider{{i}} {% if i==1 %}active{% endif %}">
+          <section class="battle">
+            <div class="option optionA col-md-6 col-sm-6">
+              <img class="float-r img-fight" src="/assets/imgs/projects/fighter/game/banner_challenge-{{i}}-A.png" alt="OptionA" />
+              <div class="circle">
+                <p class="ctr-diff"><span class="ctr-percent">%</span></p>
+              </div>
+            </div>
+            <div class="">
+              <div>
+                <p class="ctr text-ctrA">CTR</p>
+                <p class="ctr ctrA"></p>
+                <p class="vs">VS</p>
+                <p class="ctr text-ctrB">CTR</p>
+                <p class="ctr ctrB"></p>
+              </div>
+            </div>
+            <div class="option optionB col-md-6 col-sm-6">
+              <img class="float-l img-fight" src="/assets/imgs/projects/fighter/game/banner_challenge-{{i}}-B.png" alt="OptionB" />
+              <div class="circle">
+                <p class="ctr-diff"><span class="ctr-percent">%</span></p>
+              </div>
+            </div>
+          </section>
+        </li>
+      {% endfor %}
+
+    </ul>
+
+    <form name="score-form" action="score.html" method="get" id="score-form">
+      <input type="hidden" id="final-score" name="score"/>
+      <input type="hidden" id="name-score" name="name"/>
+    </form>
+
+  </article>
+
+</main>
+
+<img class="rtb-love" src="/assets/imgs/projects/fighter/game/RTBwithLove-2-34-34.svg" alt="RTB with Love" />
+
+<script src="/assets/js/jquery-2.0.3.min.js"></script>
+<script src="/assets/js/banner-fighter.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+<script src="/assets/js/banner-fighter-static.js"></script>
+

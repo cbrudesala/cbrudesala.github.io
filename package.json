@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/cbrudesala/cbrudesala.github.io#readme",
   "devDependencies": {
+    "angular": "^1.6.2",
     "browser-sync": "^2.18.6",
     "gulp": "^3.9.1",
     "gulp-shell": "^0.5.2",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "tachyons": "^4.6.1"
   }
 }

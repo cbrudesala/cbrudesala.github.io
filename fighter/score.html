@@ -1,0 +1,81 @@
+---
+layout: banner-fighter
+bg: score
+---
+
+<main ng-app="fighterApp">
+  <article>
+    <img class="lettering" src="/assets/imgs/projects/fighter/game/banner-lettering-2.png" alt="Logo" />
+  </article>
+
+  <article class="screen" ng-controller="ScoreController as score">
+
+    <div class="carousel_nav">
+      <a href="ranking.html" class="nav next-rank" ng-click="score.sendScoreAndName($event)">
+        View Ranking
+      </a>
+    </div>
+
+    <section class="score-card">
+      <p>
+        <span ng-if="score.aboveAvg()">Yeah <b ng-bind="score.name"></b>, your score is above average!</span>
+        <span ng-if="!score.aboveAvg()">Ouch <strong ng-bind="score.name"></strong>, your score is below average!</span>
+        <br>
+        <a href="ranking.html" class="see-rank" ng-click="score.sendScoreAndName($event)">
+          Discover your ranking.
+          <svg class="underline">
+            <path d="" class="underline--path">
+              <animate attributeName="d" dur="0.3s" begin="indefinite" fill="freeze" class="underline--animation"></animate>
+            </path>
+          </svg>
+        </a>
+      </p>
+      <div class="blabla">
+        <h2 id="final-score" ng-bind="score.value">
+        </h2>
+        <h4>POINTS</h4>
+      </div>
+    </section>
+
+    <img ng-if="score.aboveAvg()" class="mascota-score float-r" src="/assets/imgs/projects/fighter/game/onigiri-win.png" alt="Pet" />
+    <img ng-if="!score.aboveAvg()" class="mascota-score float-r" src="/assets/imgs/projects/fighter/game/onigiri-lost.png" alt="Pet" />
+
+  </article>
+</main>
+
+<img class="rtb-love" src="/assets/imgs/projects/fighter/game/RTBwithLove-2-34-34.svg" alt="RTB with Love" />
+
+<script src="/assets/js/jquery-2.0.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+<script src="/assets/js/banner-fighter-static.js"></script>
+<script>
+  // zig zag underline
+  var width = $('.underline').width();
+
+  var steps = 11;
+  var height = 3;
+  var step_size = width/steps;
+
+  var d_animated = ['M0', '1'];
+  var d_normal = ['M0', '1'];
+
+  for (var i=1; i<=steps; i++) {
+    d_normal.push(step_size*(-0.5 + i), 1, step_size*i, 1);
+    d_animated.push(step_size*(-0.5 + i), height, step_size*i, 1);
+  }
+
+  $(document).ready(function() {
+    $('.underline--path').attr('d', d_normal.join(' '));
+
+    window.setInterval(function() {
+      $('.underline--animation').attr({from: d_normal.join(' '), to: d_animated.join(' ')})
+      $('.underline--animation')[0].beginElement();
+    }, 1000)
+
+    window.setInterval(function() {
+      $('.underline--animation').attr({to: d_normal.join(' '), from: d_animated.join(' ')})
+      $('.underline--animation')[0].beginElement();
+    }, 2000)
+  });
+</script>
+

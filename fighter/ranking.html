@@ -1,0 +1,102 @@
+---
+layout: banner-fighter
+bg: ranking
+---
+
+<main ng-app="fighterApp">
+
+  <article>
+    <img class="lettering" src="/assets/imgs/projects/fighter/game/banner-lettering-2.png" alt="Logo" />
+  </article>
+  {% raw %}
+  <article class="screen" ng-controller="RankingController as ranking">
+    <section class="ranking-card float-l">
+      <div class="all-ranking">
+        Ranking
+      </div>
+
+      <ul>
+        <li  ng-repeat="contestant in ranking.myRanking track by $index" ng-class="{'selected': contestant.name == ranking.name }">
+        <div class="li-content">
+          <label class="your-rank float-l" ng-bind="contestant.position"></label>
+          <label class="name float-l" ng-bind="contestant.name"></label>
+          <label class="percent" id="percent-${i+1}" ng-bind="contestant.score"></label>
+          <div class="barra">
+            <span class="progressbar progress-{{$index+1}}" ng-attr-id="progress-{{$index + 1}}" data-width="{{ contestant.score * 100 / ranking.contestants[0].score }}"></span>
+          </div>
+        </div>
+        </li>
+      </ul>
+    </section>
+
+    <div class="score-panel">
+      <section class="float-l">
+        <div class="num-score-panel" ng-bind="ranking.contestants[0].score"></div>
+        <div class="text-score-panel">MAX SCORE</div>
+      </section>
+      <section class="float-r">
+        <div class="num-score-panel">201</div>
+        <div class="text-score-panel">AVG SCORE</div>
+      </section>
+    </div>
+
+    <section class="top5 float-l row">
+      <p class="thanks">Thank you for playing, <span ng-bind="ranking.name"></span>!</p>
+      <div class="bottom">
+        <div class="col-bottom">
+          <img class="mascota-img" src="/assets/imgs/projects/fighter/game/bolinga-2.png" alt="Pet" />
+          <div class="podio podio-2">
+            <div class="centrado">
+              <span class="uno float-l">2</span>
+              <div class="podio-name">
+                {{ ranking.contestants[1].name }}
+                <div class="num-score-podio">{{ ranking.contestants[1].score }} p.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-bottom">
+          <img class="mascota-img" src="/assets/imgs/projects/fighter/game/bolinga-1.png" alt="Pet" />
+          <div class="podio podio-1">
+            <div class="centrado">
+              <span class="uno float-l">1</span>
+              <div class="podio-name">
+                {{ ranking.contestants[0].name }}
+                <div class="num-score-podio">{{ ranking.contestants[0].score }} p.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-bottom">
+          <img class="mascota-img" src="/assets/imgs/projects/fighter/game/bolinga-3.png" alt="Pet" />
+          <div class="podio">
+            <div class="centrado">
+              <span class="uno float-l">3</span>
+              <div class="podio-name">
+                {{ ranking.contestants[2].name }}
+                <div class="num-score-podio">{{ ranking.contestants[2].score }} p.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+  {% endraw %}
+</main>
+
+<img class="rtb-love" src="/assets/imgs/projects/fighter/game/RTBwithLove-2-34-34.svg" alt="RTB with Love" />
+
+
+<script src="/assets/js/jquery-2.0.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+<script src="/assets/js/banner-fighter-static.js"></script>
+
+<script>
+  for (var i = 1; i <= 5; i++){
+    setTimeout(function(i){
+      $(".progress-" + i).width($("#progress-" + i).attr("data-width")+ "%" );
+    }.bind(this, i), i * 300);
+  }
+</script>
+
