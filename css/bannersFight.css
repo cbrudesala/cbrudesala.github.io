@@ -476,11 +476,12 @@ p{
 .field {
   padding-top: 0;
   border: 2px solid white;
+  border-radius: 3px 0 0 3px;
   padding: 4px;
   padding-left: 10px;
-  border-radius: 3px;
   font-size: 1em;
   background-color: transparent;
+  width:68%;
 }
 ::-webkit-input-placeholder {
   color: white;
@@ -500,14 +501,14 @@ button:focus {
 
 .play-button {
   font-size: 1em;
-  border-radius: 3px;
   color: #FF786D;
   padding: 4px 10px;
   text-align: center;
   background-color: white;
   border: 2px solid white;
+  border-radius: 0 3px 3px 0;
   cursor: pointer;
-  margin-left: -10px;
+  margin-left: -4px;
   font-family: 'VistaAltBold', Arial, sans-serif;
 }
 
@@ -1010,4 +1011,38 @@ h1, h2, h3, h4 {
 .nav.next-rank {
   bottom: 50%;
   transform: translateY(50%);
+}
+
+
+
+
+.parpadea {
+
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo{
+  0% {     color: #FF786D; }
+  50% {     color: #FFF; }
+  100% {     color: #FF786D; }
+}
+
+@-webkit-keyframes parpadeo {
+  0% {     color: #FF786D; }
+  50% { color: #FFF; }
+   100% {     color: #FF786D; }
+}
+
+@keyframes parpadeo {
+  0% {     color: #FF786D; }
+   50% { color: #FFF; }
+  100% {     color: #FF786D; }
 }
