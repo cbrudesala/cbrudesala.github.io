@@ -15,8 +15,6 @@ function FighterService() {
   this.getScore = function () {
     return this.params("score");
   };
-
-  this.totalContestants = 126
 }
 
 angular.module('fighterApp', [])
@@ -29,7 +27,6 @@ angular.module('fighterApp', [])
   .controller('ScoreController', function(FighterService) {
     var score = this;
     score.value = FighterService.getScore();
-    score.totalContestants = FighterService.totalContestants;
 
     score.name = FighterService.getName();
 
