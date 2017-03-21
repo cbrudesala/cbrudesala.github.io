@@ -474,11 +474,9 @@ p{
   width:100%;
 }
 .field {
-  padding-top: 0;
   border: 2px solid white;
   border-radius: 3px 0 0 3px;
-  padding: 4px;
-  padding-left: 10px;
+  padding: 5px 11px 3px 9px;
   font-size: 1em;
   background-color: transparent;
   width:68%;
@@ -502,7 +500,7 @@ button:focus {
 .play-button {
   font-size: 1em;
   color: #FF786D;
-  padding: 4px 10px;
+  padding: 5px 11px 3px 9px;
   text-align: center;
   background-color: white;
   border: 2px solid white;
