@@ -10,13 +10,11 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 200;
   text-rendering: optimizeLegibility;
-
 }
 
 .serif-pro{
   font-family: 'Source Serif Pro', serif;
 }
-
 
 .container {
   max-width: 1312px;
@@ -24,16 +22,15 @@ body {
   margin-right: auto;
 }
 
-
 a {
   text-decoration: none;
 }
 
-.bg-white-rgba{
+.bg-white-rgba {
   background-color: rgba(255,255,255,0.7)
 }
 
-p{
+p {
   color: #555;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -54,4 +51,13 @@ p{
       right: -2rem;
     }
   }
+}
+
+.mb-pagination {
+  margin-bottom: 400px;
+
+  @media only screen and (min-width: 30em) {
+    margin-bottom: 564px;
+  }
+
 }
