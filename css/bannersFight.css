@@ -1044,3 +1044,64 @@ h1, h2, h3, h4 {
    50% { color: #FFF; }
   100% {     color: #FF786D; }
 }
+
+
+.shade{
+  animation-name: shade;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:shade;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-@keyframes shade {
+  0% {     opacity: 1 }
+   50% { opacity: .5 }
+  100% {     opacity: 1 }
+}
+
+@-webkit-@keyframes shade {
+  0% {     opacity: 1 }
+   50% { opacity: .5 }
+ 100% {     opacity: 1 }
+}
+
+@keyframes shade {
+  0% {     opacity: 1 }
+   50% { opacity: .5 }
+ 100% {     opacity: 1 }
+}
+
+.omm{
+  animation-name: omm;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:omm;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-@keyframes omm {
+  0% {     padding-top: 3rem}
+   50% { padding-top: 0}
+  100% {     padding-top: 3rem}
+}
+
+@-webkit-@keyframes omm {
+  0% {     padding-top: 3rem}
+   50% { padding-top: 0}
+ 100% {     padding-top: 3rem}
+}
+
+@keyframes omm {
+  0% {     padding-top: 3rem}
+   50% { padding-top: 0}
+ 100% {     padding-top: 3rem}
+}

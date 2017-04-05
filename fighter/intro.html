@@ -3,10 +3,14 @@ layout: banner-fighter
 bg: intro
 ---
 
+
 <main>
   <article class="intro-screen row">
-    <div class="col-md-4 col-sm-4">
-      <img class="mascota float-r" src="/assets/imgs/projects/fighter/game/onigiri-0.png" alt="Pet" />
+    <div class="col-md-4 col-sm-4 ">
+      <div style="position:relative; min-height:360px;">
+        <img class="mascota omm" style="margin-top: 2rem;" src="/assets/imgs/projects/fighter/game/onigiri-zen.png" alt="Pet" />
+        <img class="mascota shade" style="margin-top: 5rem; position:absolute; bottom:0" src="/assets/imgs/projects/fighter/game/sombra.png" alt="Pet" />
+      </div>
     </div>
     <div class="col-md-8 col-sm-8">
       <img class="logo-intro" src="/assets/imgs/projects/fighter/game/logo-intro.png" alt="Logo" />
@@ -14,7 +18,7 @@ bg: intro
         <p>Welcome to our little game!</p>
         <p>You will fight 10 battles. Choose between two banners, and guess wich one is more likely to have more clicks (higher CTR).</p>
         <form action="game.html" method="get">
-          <input class="field " type="text" name="name" placeholder="Write your name" required>
+          <input type="text" class="field" name="name" placeholder="Write your name" required autofocus>
           <input type="submit" class="play-button parpadea" value="PLAY">
         </form>
       </div>
