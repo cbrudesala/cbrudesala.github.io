@@ -1,8 +1,9 @@
 // Simulate server side with static fixture
+
 function FighterService() {
   this.params = function (param) {
     var results = new RegExp('[\?&]' + param + '=([^&#]*)').exec(window.location.href);
-    if (results!=null && results[1]) {
+    if (results != null && results[1]) {
       return decodeURIComponent(results[1]);
     }
     return null;
