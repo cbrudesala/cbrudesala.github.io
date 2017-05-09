@@ -7,11 +7,16 @@ title: Cecilia
   {% assign projects = (site.projects | sort: 'date') %}
   {% for project in projects %}
     <li class="border-box fl w-100 w-50-ns {% cycle 'pr1-ns pr2-l', 'pl1-ns pl2-l' %} pb2 pb3-l">
-      <a href="{{project.url}}" class="db absolute--fill">
+      <a href="{{project.url}}" class="db absolute--fill seva">
         <figure class="ma0 hide-child relative">
           <img src="/assets/imgs/projects/{{project.name}}/{{project.name}}_thumb.jpg" alt="{{project.name}}">
-          <div class="pl4 pt2 absolute bottom-2  w-100">
-            <span class="mid-gray f6 white"><small><b>{{ project.title }}</b> </small></span>
+          <div class="pl4 pt2 absolute bottom-2 w-100">
+            <div class="overflow-hidden">
+              <span class="db mid-gray f4 f3-ns white pb1"><b>{{ project.title }}</b></span>
+            </div>
+            <div class="overflow-hidden">
+              <span class="mid-gray f6-ns white tracked-light"><small><b>{{ project.subtitle }}</b> </small></span>
+            </div>
           </div>
           <figcaption class="absolute child top-0  w-100 h-100">
             <img src="/assets/imgs/projects/{{project.name}}/{{project.name}}_thumb_2.png" alt="{{project.name}}">

@@ -20,6 +20,14 @@ body {
   font-family:'VistaAltLight', serif;
 }
 
+.vista {
+  font-family:'VistaAltBook', serif;
+}
+
+.vista-bold {
+  font-family:'VistaAltBold', serif;
+}
+
 .lato {
   font-family: 'Lato', sans-serif;
 }
@@ -60,6 +68,13 @@ p {
   border-color: #F1F2F9;
 }
 
+
+
+.tracked-light{
+    letter-spacing: .05em;
+}
+
+
 @media only screen and (min-width: 60em) {
   .mh--1-l {
     margin: {
@@ -76,4 +91,31 @@ p {
     margin-bottom: 564px;
   }
 
+}
+
+.seva span {
+    display: block;
+    will-change: transform;
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    -moz-transition: all 1s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+    -ms-transition: all 1s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+    -webkit-transition: all 1s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+    transition: all 668.04ms cubic-bezier(0.37, 0.31, 0.2, 0.85) 200ms;
+}
+
+.seva:hover span {
+    opacity: 0;
+    display: block;
+    will-change: transform;
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    -moz-transition: all 1s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+    -ms-transition: all 1s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+    -webkit-transition: all 1s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+    transition: all 668.04ms cubic-bezier(0.37, 0.31, 0.2, 0.85) 200ms;
 }
