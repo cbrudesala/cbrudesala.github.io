@@ -119,3 +119,9 @@ p {
     -webkit-transition: all 1s cubic-bezier(0.37, 0.31, 0.2, 0.85);
     transition: all 668.04ms cubic-bezier(0.37, 0.31, 0.2, 0.85) 200ms;
 }
+
+.contact:hover{
+    padding-bottom: .25rem;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
