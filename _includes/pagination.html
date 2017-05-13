@@ -59,14 +59,24 @@
     <a class="border-box mid-gray fl f4 v-mid w-50 pl4 pl6-l" href="{{prev.url}}">
       <div class="w-70-ns fr pr2 pr3-ns">
         <span class="db mb1 mb3-ns f5 f4-ns nowrap">&laquo; Previous project</span>
-        <img src="/assets/imgs/projects/{{prev.name}}/{{prev.name}}_thumb_2.jpg" alt="{{prev.name}}">
+          <div class="ma0 relative w-100">
+              <img src="/assets/imgs/projects/{{prev.name}}/{{prev.name}}_thumb.jpg" alt="{{prev.name}}">
+              <div class="absolute top-0 w-100 h-100">
+                <img src="/assets/imgs/projects/{{prev.name}}/{{prev.name}}_thumb_2.png" alt="{{prev.name}}">
+              </div>
+          </div>
       </div>
     </a>
 
     <a class="border-box mid-gray fr tr f4 v-mid w-50 pr4 pr6-l" href="{{next.url}}">
       <div class="w-70-ns fl pl2 pl3-ns">
         <span class="db mb1 mb3-ns f5 f4-ns">Next project &raquo;</span>
-        <img src="/assets/imgs/projects/{{next.name}}/{{next.name}}_thumb_2.jpg" alt="{{next.name}}">
+        <div class="ma0 relative w-100">
+            <img src="/assets/imgs/projects/{{next.name}}/{{next.name}}_thumb.jpg" alt="{{next.name}}">
+            <div class="absolute top-0 w-100 h-100">
+              <img src="/assets/imgs/projects/{{next.name}}/{{next.name}}_thumb_2.png" alt="{{next.name}}">
+            </div>
+        </div>
       </div>
     </a>
   </div>
