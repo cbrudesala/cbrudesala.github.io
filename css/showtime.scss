@@ -125,3 +125,8 @@ p {
     border-bottom-style: solid;
     border-bottom-width: 1px;
 }
+
+@media only screen and (min-width: 64em) {
+  .hide-child-l .child-l { opacity: 0; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in; }
+  .hide-child-l:hover .child-l, .hide-child-l:focus .child-l, .hide-child-l:active .child-l { opacity: 1; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in; }
+}
