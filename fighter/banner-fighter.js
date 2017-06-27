@@ -82,7 +82,7 @@ $(".next").click( function() {
     $("#current-level").text(current);
   }
   //reset status from option A & B
-  $("circle").removeClass("show");
+  $(".circle").removeClass("show");
   $(".ko").removeClass("show");
   $(".ok").removeClass("show");
   $(".ctr").removeClass("show");
