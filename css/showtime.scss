@@ -3,8 +3,6 @@
 ---
 @import "variables";
 @import "typography";
-//@import "timeline";
-
 
 body {
   font-family: 'Lato', sans-serif;
@@ -75,8 +73,6 @@ p {
   border-color: #F1F2F9;
 }
 
-
-
 .tracked-light{
     letter-spacing: .05em;
 }
@@ -93,6 +89,17 @@ p {
   .pb11-l {
     padding-bottom: 11rem;
   }
+}
+
+.wide {
+
+  @media only screen and (min-width: 30em) {
+    margin: {
+      left: -2rem;
+      right: -2rem;
+    }
+  }
+
 }
 
 .mb-pagination {
