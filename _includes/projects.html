@@ -1,0 +1,23 @@
+<ul class="list cf pa0">
+  {% assign projects = (site.projects | sort: 'date') %}
+  {% for project in projects %}
+  <li class="border-box fl w-100 w-50-ns {% cycle 'pr1-ns pr2-l', 'pl1-ns pl2-l' %} pb2 pb3-l">
+    <a href="{{project.url}}" class="db absolute--fill seva">
+      <figure class="ma0 hide-child-l relative">
+        <img src="/assets/imgs/projects/{{project.name}}/{{project.name}}_thumb.jpg" alt="{{project.name}}">
+        <div class="pl4 pt2 absolute bottom-2 w-100 dn db-l">
+          <div class="overflow-hidden">
+            <span class="db mid-gray f4 f3-ns white pb1">{{ project.title }}</span>
+          </div>
+          <div class="overflow-hidden">
+            <span class="mid-gray f6-ns white tracked-light"><small><b>{{ project.subtitle }}</b> </small></span>
+          </div>
+        </div>
+        <figcaption class="absolute child-l top-0  w-100 h-100">
+          <img src="/assets/imgs/projects/{{project.name}}/{{project.name}}_thumb_2.png" alt="{{project.name}}">
+        </figcaption>
+      </figure>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
