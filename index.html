@@ -4,3 +4,10 @@ title: Cecilia
 ---
 
 {% include projects.html %}
+
+<script>
+  var remember = getCookie("remember");
+  if (remember) {
+    window.location.replace(remember)
+  }
+</script>
